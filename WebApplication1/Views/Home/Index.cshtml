@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+        <span>Select File:</span><br />
+        <input type="file" name="postedFiles" /><br /><br />
+        <input type="submit" value="Upload" />
+        <br />
+        <span style="color:green">@Html.Raw(ViewBag.Message)</span>
+    </form>
+</body>
+</html>
